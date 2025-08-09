@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Treasury Bill 91d", "type": "TB", "rate": 12.5, "tenure": "91 days", "min": 50000 },
+  { "id": 2, "name": "OMO 180d", "type": "OMO", "rate": 14.2, "tenure": "180 days", "min": 100000 },
+  { "id": 3, "name": "Bond 365d", "type": "Bond", "rate": 10.0, "tenure": "365 days", "min": 50000 }
+]

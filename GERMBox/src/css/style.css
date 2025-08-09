@@ -1,0 +1,50 @@
+:root{
+  --primary:#0066CC;
+  --gold:#FFD700;
+  --bg:#F5F6F5;
+  --muted:#666;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#111;
+  -webkit-font-smoothing:antialiased;
+}
+
+.site-header, .site-footer{
+  background:#fff;
+  padding:12px 20px;
+  box-shadow:0 1px 6px rgba(0,0,0,0.06);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.site-header .logo a{font-weight:700; color:var(--primary); text-decoration:none; margin-left:8px;}
+.site-header .nav-links{list-style:none; display:flex; gap:12px; margin:0; padding:0; align-items:center}
+.site-header .nav-links a, .site-header .nav-links button{color:#333; text-decoration:none; background:none; border:none; cursor:pointer;}
+.container{max-width:1100px; margin:20px auto; padding:12px;}
+
+.ticker{background:var(--gold); padding:10px; border-radius:8px; margin-bottom:14px; font-weight:600; color:#111}
+
+.controls{display:flex; gap:12px; align-items:center; margin-bottom:10px}
+.controls select, .controls button{padding:6px 8px; border-radius:6px; border:1px solid #ddd}
+
+.table{width:100%; border-collapse:collapse; background:#fff; box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.table thead th{background:#fafafa; text-align:left; padding:10px; border-bottom:1px solid #eee}
+.table td{padding:10px; border-bottom:1px solid #f0f0f0}
+button.btn-invest{background:var(--primary); color:#fff; border:0; padding:6px 10px; border-radius:6px; cursor:pointer}
+
+/* modal */
+.modal-backdrop{
+  position:fixed; inset:0; background:rgba(0,0,0,0.4); display:flex; align-items:center; justify-content:center;
+}
+.modal{
+  width:100%; max-width:520px; background:#fff; padding:18px; border-radius:8px; box-shadow:0 6px 24px rgba(0,0,0,0.2)
+}
+.modal .row{margin-bottom:10px}
+.input, select{width:100%; padding:8px; border-radius:6px; border:1px solid #ddd}
+.small{font-size:13px;color:var(--muted)}

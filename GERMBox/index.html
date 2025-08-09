@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GERMBox — CBN Instruments</title>
+  <!-- Vite serves files from /src during dev; absolute path works -->
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+  <!-- header and footer are loaded from partials via fetch -->
+  <header id="main-header"></header>
+
+  <main class="container">
+    <div class="ticker">🔥 Treasury Bill (365 days) has the highest yield — click Invest</div>
+
+    <section class="instruments">
+      <h2>CBN Instruments</h2>
+
+      <div class="controls">
+        <label>
+          Filter:
+          <select id="filterType">
+            <option value="">All</option>
+            <option value="TB">TB</option>
+            <option value="OMO">OMO</option>
+            <option value="Bond">Bond</option>
+          </select>
+        </label>
+
+        <button id="sortRateBtn">Sort by Rate ↓</button>
+      </div>
+
+      <table id="instrumentsTable" class="table">
+        <thead>
+          <tr><th>Name</th><th>Rate (%)</th><th>Tenure</th><th>Min</th><th></th></tr>
+        </thead>
+        <tbody>
+          <!-- rows injected here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer id="main-footer"></footer>
+
+  <!-- modal root (quickInvest will populate) -->
+  <div id="modal-root"></div>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
