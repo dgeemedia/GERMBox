@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up - GERMBox</title>
+  <link rel="stylesheet" href="../src/css/style.css" />
+</head>
+<body>
+  <header id="main-header"></header>
+
+  <main class="container">
+    <h1>Sign Up</h1>
+    <form id="signupForm" style="max-width:420px;background:#fff;padding:12px;border-radius:8px">
+      <label>Email<input id="su-email" class="input" type="email"></label>
+      <label>Password<input id="su-password" class="input" type="password"></label>
+      <div style="margin-top:8px;display:flex;gap:8px;justify-content:flex-end">
+        <button type="submit" class="btn-primary">Create account</button>
+      </div>
+      <div id="signupMsg" class="small" style="margin-top:8px"></div>
+    </form>
+  </main>
+
+  <footer id="main-footer"></footer>
+
+  <script type="module">
+    import { signup } from '/src/js/auth.mjs';
+    import '/src/js/main.js';
+    document.getElementById('signupForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('su-email').value;
+      const pw = document.getElementById('su-password').value;
+      const u = signup({email, password: pw});
+      const msg = document.getElementById('signupMsg');
+      if (u) {
+        msg.textContent = 'Account created (mock). Redirecting...';
+        setTimeout(()=> location.href = '/src/pages/portfolio.html', 800);
+      } else msg.textContent = 'Signup failed - provide email & password.';
+    });
+  </script>
+</body>
+</html>

@@ -1,10 +1,9 @@
-<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>GERMBox — CBN Instruments</title>
-  <!-- Vite serves files from /src during dev; absolute path works -->
+  
   <link rel="stylesheet" href="/src/css/style.css" />
 </head>
 <body>
@@ -12,8 +11,10 @@
   <header id="main-header"></header>
 
   <main class="container">
-    <div class="ticker">🔥 Treasury Bill (365 days) has the highest yield — click Invest</div>
-
+    <div class="ticker">
+      <span id="exchangeTicker">Loading exchange rates...</span>
+    </div>
+    
     <section class="instruments">
       <h2>CBN Instruments</h2>
 
@@ -40,6 +41,9 @@
         </tbody>
       </table>
     </section>
+    
+    <section id="institutions-map" style="height:400px;"></section>
+
   </main>
 
   <footer id="main-footer"></footer>

@@ -1,4 +1,3 @@
-// utils.js - small helpers
 export function qs(sel, parent = document) {
   return parent.querySelector(sel);
 }

@@ -1,11 +1,11 @@
-// instruments.js - loads mock JSON and renders instruments table
+//instruments.mjs
 import { qs } from './utils.mjs';
 
 export async function loadAndRenderInstruments(tableSelector = '#instrumentsTable') {
   const table = qs(tableSelector);
+  if (!table) return;
   const tbody = table.querySelector('tbody');
 
-  // fetch mock data placed in public/data/instruments.json
   const res = await fetch('/data/instruments.json');
   if (!res.ok) {
     tbody.innerHTML = '<tr><td colspan="5">Failed to load instruments.</td></tr>';
@@ -15,10 +15,10 @@ export async function loadAndRenderInstruments(tableSelector = '#instrumentsTabl
 
   function rowHtml(item) {
     return `<tr>
-      <td>${item.name}</td>
-      <td>${item.rate}</td>
+      <td><strong>${item.name}</strong><div class="small">${item.type}</div></td>
+      <td>${item.rate}%</td>
       <td>${item.tenure}</td>
-      <td>${item.min.toLocaleString()}</td>
+      <td>₦${item.min.toLocaleString()}</td>
       <td><button class="btn-invest" data-id="${item.id}">Invest</button></td>
     </tr>`;
   }
@@ -31,11 +31,10 @@ export async function loadAndRenderInstruments(tableSelector = '#instrumentsTabl
     if (!btn) return;
     const id = btn.dataset.id;
     const instrument = list.find(i => String(i.id) === String(id));
-    // fire a custom event that other modules can listen to
     document.dispatchEvent(new CustomEvent('invest:open', { detail: instrument }));
   });
 
-  // wire simple filter by type if exists
+  // filter & sort wiring
   const filter = document.getElementById('filterType');
   if (filter) {
     filter.addEventListener('change', () => {
@@ -45,7 +44,6 @@ export async function loadAndRenderInstruments(tableSelector = '#instrumentsTabl
     });
   }
 
-  // simple sort button
   const sortBtn = document.getElementById('sortRateBtn');
   if (sortBtn) {
     let desc = true;
