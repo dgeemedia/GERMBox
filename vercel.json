@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "public/pages/**/*.html", "use": "@vercel/static" },
+    { "src": "src/css/**/*", "use": "@vercel/static" },
+    { "src": "src/js/**/*", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "index.html" },
+    { "src": "/support", "dest": "public/pages/support.html" },
+    { "src": "/login", "dest": "public/pages/login.html" },
+    { "src": "/portfolio", "dest": "public/pages/portfolio.html" },
+    { "src": "/signup", "dest": "public/pages/signup.html" }
+  ]
+}
