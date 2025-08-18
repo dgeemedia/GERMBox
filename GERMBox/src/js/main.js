@@ -1,3 +1,5 @@
+import "../css/style.css";
+
 import { getExchangeRates } from './api.mjs';
 import { loadTemplate, renderWithTemplate } from './utils.mjs';
 import { loadAndRenderInstruments } from './instruments.mjs';
