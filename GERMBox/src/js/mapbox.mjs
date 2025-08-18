@@ -1,4 +1,4 @@
-// Assumes mapbox-gl is installed via npm or CDN; import works in module context.
+// mapbox
 import mapboxgl from 'mapbox-gl';
 import { getInstitutionLocations } from './api.mjs';
 

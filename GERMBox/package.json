@@ -6,8 +6,9 @@
   "description": "GERMBox: A web-based financial marketplace for CBN-regulated investments in Nigeria",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --emptyOutDir",
+    "build": "vite build",
     "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist",
     "lint": "eslint .",
     "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\""
   },
