@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - GERMBox</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+  <header id="main-header"></header>
+  <main class="container">
+    <h1>Login</h1>
+    <form id="loginForm" style="max-width:420px;background:#fff;padding:12px;border-radius:8px">
+      <label>Email<input id="email" class="input" type="email"></label>
+      <label>Password<input id="password" class="input" type="password"></label>
+      <div style="margin-top:8px;display:flex;gap:8px;justify-content:flex-end">
+        <button type="submit" class="btn-primary">Login</button>
+        <a href="/pages/signup.html" class="btn-ghost" style="align-self:center">Sign up</a>
+      </div>
+      <div id="loginMsg" class="small" style="margin-top:8px"></div>
+    </form>
+  </main>
+  <footer id="main-footer"></footer>
+
+  <script type="module">
+    import { login } from '/src/js/auth.mjs';
+    import '/src/js/main.js';
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const pw = document.getElementById('password').value;
+      const u = login(email, pw);
+      const msg = document.getElementById('loginMsg');
+      if (u) {
+        msg.textContent = 'Logged in (mock).';
+        setTimeout(()=> location.href = '/src/pages/portfolio.html', 800);
+      } else {
+        msg.textContent = 'Login failed (enter email & password).';
+      }
+    });
+  </script>
+</body>
+</html>

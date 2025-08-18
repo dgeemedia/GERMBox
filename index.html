@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GERMBox — CBN Instruments</title>
+  
+  <script type="module" crossorigin src="/germbox/assets/main-DoUkWqCT.js"></script>
+  <link rel="stylesheet" crossorigin href="/germbox/assets/main-ZuET1Pqc.css">
+</head>
+<body>
+  <!-- header and footer are loaded from partials via fetch -->
+  <header id="main-header"></header>
+
+  <main class="container">
+    <div class="ticker">
+      <span id="exchangeTicker">Loading exchange rates...</span>
+    </div>
+    
+    <section class="instruments">
+      <h2>CBN Instruments</h2>
+
+      <div class="controls">
+        <label>
+          Filter:
+          <select id="filterType">
+            <option value="">All</option>
+            <option value="TB">TB</option>
+            <option value="OMO">OMO</option>
+            <option value="Bond">Bond</option>
+          </select>
+        </label>
+
+        <button id="sortRateBtn">Sort by Rate ↓</button>
+      </div>
+
+      <table id="instrumentsTable" class="table">
+        <thead>
+          <tr><th>Name</th><th>Rate (%)</th><th>Tenure</th><th>Min</th><th></th></tr>
+        </thead>
+        <tbody>
+          <!-- rows injected here -->
+        </tbody>
+      </table>
+    </section>
+    
+    <section id="institutions-map" style="height:400px;"></section>
+
+  </main>
+
+  <footer id="main-footer"></footer>
+
+  <!-- modal root (quickInvest will populate) -->
+  <div id="modal-root"></div>
+
+</body>
+</html>

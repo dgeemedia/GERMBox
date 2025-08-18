@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio - GERMBox</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+  <header id="main-header"></header>
+
+  <main class="container">
+    <h1>Your Portfolio</h1>
+    <p class="small">Mock portfolio (client-side). Chart below is demo only.</p>
+
+    <canvas id="portfolio-chart" width="800" height="300" style="background:#fff;border-radius:8px;padding:8px"></canvas>
+    <div id="portfolio-list" style="margin-top:14px"></div>
+  </main>
+
+  <footer id="main-footer"></footer>
+  <script type="module">
+    import '/src/js/main.js';
+    import { renderPortfolioChart } from '/src/js/charting.mjs';
+    // demo dataset
+    renderPortfolioChart('portfolio-chart', [100000, 110000, 120000, 118000, 130000, 140000]);
+  </script>
+</body>
+</html>

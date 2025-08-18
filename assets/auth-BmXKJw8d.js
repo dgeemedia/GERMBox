@@ -1,0 +1,1 @@
+import{s as n}from"./main-DoUkWqCT.js";const s="germbox:user";function u(t,e){if(!t||!e)return!1;const r={email:t,loggedAt:Date.now()};return n(s,r),r}function f({email:t,password:e}){if(!t||!e)return!1;const r={email:t,createdAt:Date.now()};return n(s,r),r}export{u as l,f as s};

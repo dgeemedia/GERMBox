@@ -1,0 +1,11 @@
+[
+  { "id": 1, "name": "Treasury Bill 91d", "type": "TB", "rate": 12.5, "tenure": "91 days", "min": 50000 },
+  { "id": 2, "name": "Treasury Bill 182d", "type": "TB", "rate": 13.8, "tenure": "182 days", "min": 75000 },
+  { "id": 3, "name": "Treasury Bill 364d", "type": "TB", "rate": 15.2, "tenure": "364 days", "min": 100000 },
+  { "id": 4, "name": "OMO 90d", "type": "OMO", "rate": 11.7, "tenure": "90 days", "min": 50000 },
+  { "id": 5, "name": "OMO 180d", "type": "OMO", "rate": 14.2, "tenure": "180 days", "min": 100000 },
+  { "id": 6, "name": "OMO 365d", "type": "OMO", "rate": 16.5, "tenure": "365 days", "min": 150000 },
+  { "id": 7, "name": "FGN Bond 1Y", "type": "Bond", "rate": 10.0, "tenure": "1 year", "min": 50000 },
+  { "id": 8, "name": "FGN Bond 3Y", "type": "Bond", "rate": 11.5, "tenure": "3 years", "min": 100000 },
+  { "id": 9, "name": "FGN Bond 5Y", "type": "Bond", "rate": 13.0, "tenure": "5 years", "min": 200000 }
+]
