@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio - GERMBox</title>
-  <link rel="stylesheet" href="/src/css/style.css" />
+  <title>Portfolio - GERMBox</title>
+  <script type="module" crossorigin src="/GERMBox/assets/portfolio-B8UXVG_U.js"></script>
+  <link rel="modulepreload" crossorigin href="/GERMBox/assets/main-P1wkK6iI.js">
+  <link rel="stylesheet" crossorigin href="/GERMBox/assets/main-ZuET1Pqc.css">
 </head>
 <body>
   <header id="main-header"></header>
@@ -17,12 +19,6 @@
     <div id="portfolio-list" style="margin-top:14px"></div>
   </main>
 
-  <footer id="main-footer"></footer>
-  <script type="module">
-    import '/src/js/main.js';
-    import { renderPortfolioChart } from '/src/js/charting.mjs';
-    // demo dataset
-    renderPortfolioChart('portfolio-chart', [100000, 110000, 120000, 118000, 130000, 140000]);
-  </script>
+  <footer id="main-footer"></footer>
 </body>
 </html>

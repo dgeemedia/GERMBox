@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Login - GERMBox</title>
-  <link rel="stylesheet" href="/src/css/style.css" />
+  <title>Login - GERMBox</title>
+  <script type="module" crossorigin src="/GERMBox/assets/login-DZLptJss.js"></script>
+  <link rel="modulepreload" crossorigin href="/GERMBox/assets/main-P1wkK6iI.js">
+  <link rel="modulepreload" crossorigin href="/GERMBox/assets/auth-DOYFihIQ.js">
+  <link rel="stylesheet" crossorigin href="/GERMBox/assets/main-ZuET1Pqc.css">
 </head>
 <body>
   <header id="main-header"></header>
@@ -21,23 +24,6 @@
     </form>
   </main>
   <footer id="main-footer"></footer>
-
-  <script type="module">
-    import { login } from '/src/js/auth.mjs';
-    import '/src/js/main.js';
-    document.getElementById('loginForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-      const pw = document.getElementById('password').value;
-      const u = login(email, pw);
-      const msg = document.getElementById('loginMsg');
-      if (u) {
-        msg.textContent = 'Logged in (mock).';
-        setTimeout(()=> location.href = '/src/pages/portfolio.html', 800);
-      } else {
-        msg.textContent = 'Login failed (enter email & password).';
-      }
-    });
-  </script>
+
 </body>
 </html>

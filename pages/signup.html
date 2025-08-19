@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sign Up - GERMBox</title>
-  <link rel="stylesheet" href="/src/css/style.css" />
+  <title>Sign Up - GERMBox</title>
+  <script type="module" crossorigin src="/GERMBox/assets/signup-Dr70Wwz7.js"></script>
+  <link rel="modulepreload" crossorigin href="/GERMBox/assets/main-P1wkK6iI.js">
+  <link rel="modulepreload" crossorigin href="/GERMBox/assets/auth-DOYFihIQ.js">
+  <link rel="stylesheet" crossorigin href="/GERMBox/assets/main-ZuET1Pqc.css">
 </head>
 <body>
   <header id="main-header"></header>
@@ -22,21 +25,6 @@
   </main>
 
   <footer id="main-footer"></footer>
-
-  <script type="module">
-    import { signup } from '/src/js/auth.mjs';
-    import '/src/js/main.js';
-    document.getElementById('signupForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = document.getElementById('su-email').value;
-      const pw = document.getElementById('su-password').value;
-      const u = signup({email, password: pw});
-      const msg = document.getElementById('signupMsg');
-      if (u) {
-        msg.textContent = 'Account created (mock). Redirecting...';
-        setTimeout(()=> location.href = '/src/pages/portfolio.html', 800);
-      } else msg.textContent = 'Signup failed - provide email & password.';
-    });
-  </script>
+
 </body>
 </html>
