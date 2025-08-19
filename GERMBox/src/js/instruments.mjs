@@ -6,7 +6,7 @@ export async function loadAndRenderInstruments(tableSelector = '#instrumentsTabl
   if (!table) return;
   const tbody = table.querySelector('tbody');
 
-  const res = await fetch('/data/instruments.json');
+  const res = await fetch('./data/instruments.json');
   if (!res.ok) {
     tbody.innerHTML = '<tr><td colspan="5">Failed to load instruments.</td></tr>';
     return;

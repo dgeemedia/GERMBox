@@ -27,8 +27,8 @@ async function updateTicker() {
 
 async function init() {
   try {
-    const headerHtml = await loadTemplate('/partials/header.html');
-    const footerHtml = await loadTemplate('/partials/footer.html');
+    const headerHtml = await loadTemplate('./partials/header.html');
+    const footerHtml = await loadTemplate('./partials/footer.html');
     renderWithTemplate(headerHtml, document.getElementById('main-header'));
     renderWithTemplate(footerHtml, document.getElementById('main-footer'));
 
